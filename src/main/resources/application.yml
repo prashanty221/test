@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    default: local
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+application:
+  title: Rewards Points API
+  version: 0.0.1
+  amounts:
+    amount-one: 50
+    amount-two: 100
